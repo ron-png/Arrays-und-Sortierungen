@@ -88,10 +88,9 @@ namespace Arrays_und_Sortierungen
 
             int[] array = new int[10]; // Definiert, wie lang das Array werden soll
 
-            for (int i = 0; i < 10; i++) // for loop, um das Array mit zufälligen Zahlen zu erstellen https://www.w3schools.com/cs/cs_for_loop.php
+            for (int i = 0; i < array.GetLength; i++) // for loop, um das Array mit zufälligen Zahlen zu erstellen https://www.w3schools.com/cs/cs_for_loop.php
             {
                 array[i] = rnd.Next();
-                Console.WriteLine(array[i]);
             }
 
         }
