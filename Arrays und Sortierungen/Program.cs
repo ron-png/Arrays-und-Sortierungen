@@ -26,7 +26,7 @@ namespace Arrays_und_Sortierungen
         }
 
 
-        // Funktion, um Zahlen vom Benutzer zu bekommen
+        // Funktion, um Zahlen vom Benutzer zu bekommen, überprüft auch, ob die Angabe wirklich eine Int32 Zahl ist
         static int ZahlHolen(string text)
         {
             // Für die Funktion Wichtige Variabeln
@@ -63,21 +63,25 @@ namespace Arrays_und_Sortierungen
         }
 
 
-        static void Variante1()
         // Erstellen Sie ein Programm, welches ein Array mit 10 Feldern anlegt und dieses mit Zahlen füllt.
         // Geben Sie dieses Arrays auf sinnvolle Weise auf dem Bildschirm aus.
+        static void Variante1()
+        
         {
-            // Definiere Variabeln
+            // Erstelle Array und fülle diesen direkt mir Daten
             int[] array = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }; // Array mit den jeweiligen Werten
 
-            for (int i = 0; i < array.GetLength(0); i++)
+
+            // Ausgabe des Arrays
+            for (int i = 0; i < array.GetLength(0); i++) // GetLength(0) In der Klammer wird die Dimenson des Arrays angegeben, von dem die Länge ergriffen werden soll
             {
-                Console.Write(array[i] + " ");
+                Console.Write(array[i] + " "); 
             }
         }
 
-        static void Variante2()
+
         // Modifizieren Sie Variante 1 so, dass das Array mit zufälligen Zahlen gefüllt wird.
+        static void Variante2()
         {
 
             // Zufallszahlen generieren
@@ -107,17 +111,16 @@ namespace Arrays_und_Sortierungen
 
         }
 
-        static void Variante3()
 
         // Erstellen Sie zum Erzeugen und Füllen des Arrays aus Variante 2 eine Methode, welche anhand der
         // angegebenen Anzahl das jeweilige Array in der richtigen Größe erstellt und zurückgibt.
 
         // Lagern Sie außerdem die Ausgabe des Arrays in eine Methode aus und übergeben Sie dieser
         // Methode das Array.
-
+        static void Variante3()
         {
             // Definiere Variabeln
-            int AnzahlArrayWerte;   // Counter, um sowohl den while loop zu beenden, als auch den richtigen Wert im array anzugeben
+            int AnzahlArrayWerte;   // Variabel, die für die Eingabe des Nutzers zur Länge des Arrays speichert
 
             // Zufallszahlen generieren
             Random rnd = new Random();
@@ -133,67 +136,74 @@ namespace Arrays_und_Sortierungen
             }
         }
 
-        static void Variante4()
+
         // Ergänzen Sie die vorhergehende Variante um eine Eingabe, durch die der Benutzer auswählen kann,
         // wie groß das erstellte Array sein soll.Realisieren Sie diese Funktionalität ebenfalls in einer eigenen
         // Methode.
+        static void Variante4()
         {
 
         }
 
-        static void Variante5()
+
         // Erstellen Sie eine neue Methode, durch die vom Array nur ein bestimmter, zusammenhängender
         // Bereich zurückgegeben wird (z.B.nur Elemente 2-5). Nutzen Sie diese, um das Array nur teilweise
         // auszugeben.
+        static void Variante5()
         {
 
         }
 
-        static void Variante6()
+
         // Schreiben Sie eine Methode, welche zwei Elemente des Arrays miteinander vertauscht und geben Sie
         // ihr Array einmal im erstellten Zustand und einmal in einem vertauschten Zustand aus, der das Array
         // vollständig von hinten nach vorne vertauscht.
+        static void Variante6()
         {
 
         }
 
-        static void Variante7()
+
         // Finden Sie heraus, wie Sie das Zahlenarray in C# auf einfache Weise sortieren können und
         // implementieren Sie diese Funktion.Geben Sie das Array sowohl vor, als auch nach der Sortierung
         // aus.
+        static void Variante7()
         {
 
         }
 
-        static void Variante8()
+
         // Nun soll ein eigener Sortieralgorithmus realisiert werden.Überlegen Sie zunächst selbst, wie sie die
         // Sortierung von kleinen Arrays realisieren würden und schreiben Sie eine Methode zur Sortierung eines Arrays
         // von 3 Elementen.
+        static void Variante8()
         {
 
         }
 
-        static void Variante9()
+
         // Überlegen Sie, ob sich ihre Methode aus Variante 6 auch für mehr als drei Elemente erweitern lässt.
         // Ist dies der Fall, versuchen Sie, diese Methode für ein größeres (beliebig großes) Array umzusetzen.
         // Sollte Ihre Idee nicht für mehr als drei Elemente funktionieren, schauen Sie sich bereits bekannte
         // Sortier-Algorithmen an und versuchen Sie, einen davon nachzubauen.
         // Einfache Algorithmen sind: SelectionSort, InsertionSort oder Bubblesort
+        static void Variante9()
         {
 
         }
 
-        static void Variante10()
+
         // Zählen Sie, wie viele Änderungen das Array durchläuft, bis es sortiert wurde und geben Sie diese
         // Anzahl am Ende des Programms mit aus.
+        static void Variante10()
         {
 
         }
 
-        static void Zusatzaufgabe1()
+
         // Implementieren Sie einen zweiten Sortieralgorithmus und ein Menü, durch welches der Benutzer
         // auswählen kann, mit welchem Verfahren sortiert wird.
-
+        static void Zusatzaufgabe1()
         {
 
         }
