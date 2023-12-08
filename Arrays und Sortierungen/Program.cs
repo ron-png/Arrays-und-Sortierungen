@@ -70,6 +70,21 @@ namespace Arrays_und_Sortierungen
             }
         }
 
+        // Methode, um ein Array zu erstelllen
+        static int[] ArrayErstellen(int arraydimension0)
+        {
+            int[] array1 = new int[arraydimension0]; // Definiert, wie lang das Array werden soll
+
+            // zum Zufallszahlen generieren...
+            Random rnd = new Random();
+
+            for (int i = 0; i < array1.GetLength(0); i++) // for loop, um das Array mit zufälligen Zahlen zu erstellen https://www.w3schools.com/cs/cs_for_loop.php
+            {
+                array1[i] = rnd.Next();
+            }
+
+            return array1;
+        }
 
         // Variante 1:
         // Erstellen Sie ein Programm, welches ein Array mit 10 Feldern anlegt und dieses mit Zahlen füllt.
@@ -141,14 +156,19 @@ namespace Arrays_und_Sortierungen
             // Fragt jetzt den Nutzer nach seiner gewünschten Arraylänge
             AnzahlArrayWerte = ZahlHolen("Wie Viele Werte sollen in dem Array sein?");
 
-            int[] array1 = new int[AnzahlArrayWerte]; // Definiert, wie lang das Array werden soll
+            int[] arrayVariante3;
 
-            for (int i = 0; i < array1.GetLength(0); i++) // for loop, um das Array mit zufälligen Zahlen zu erstellen https://www.w3schools.com/cs/cs_for_loop.php
-            {
-                array1[i] = rnd.Next();
-            }
+            arrayVariante3 = ArrayErstellen(AnzahlArrayWerte);
 
-            ArrayAusgabe(array1);
+            //int[] array1 = new int[AnzahlArrayWerte]; // Definiert, wie lang das Array werden soll
+
+            //for (int i = 0; i < array1.GetLength(0); i++) // for loop, um das Array mit zufälligen Zahlen zu erstellen https://www.w3schools.com/cs/cs_for_loop.php
+            //{
+            //    array1[i] = rnd.Next();
+            //}                               
+
+            // ruft die Methode auf, um den Array Auszugeben
+            ArrayAusgabe(arrayVariante3);
         }
 
 
