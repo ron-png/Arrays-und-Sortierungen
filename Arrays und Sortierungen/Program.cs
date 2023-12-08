@@ -11,8 +11,8 @@ namespace Arrays_und_Sortierungen
         {
             // Alle Varianten. Zum Ausführen einer Variante das "//" vor der Variante entfernen!
 
-            Variante1();
-            //Variante2();
+            //Variante1();
+            Variante2();
             //Variante3();
             //Variante4();
             //Variante5();
@@ -70,7 +70,7 @@ namespace Arrays_und_Sortierungen
             // Definiere Variabeln
             int[] array = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }; // Array mit den jeweiligen Werten
 
-            for (int i =0; i < array.Length; i++)
+            for (int i = 0; i < array.GetLength(0); i++)
             {
                 Console.Write(array[i] + " ");
             }
@@ -83,12 +83,27 @@ namespace Arrays_und_Sortierungen
             // Zufallszahlen generieren
             Random rnd = new Random();
 
+            // Erstellen des Arrays
             int[] array = new int[10]; // Definiert, wie lang das Array werden soll
 
-            //for (int i = 0; i < array.GetLength; i++) // for loop, um das Array mit zufälligen Zahlen zu erstellen https://www.w3schools.com/cs/cs_for_loop.php
-            //{
-            //    array[i] = rnd.Next();
-            //}
+            // Befülllen des Arrays mit Werten
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                array[i] = rnd.Next();
+            }
+
+
+            // Ausgabe des Arrays
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                Console.Write(array[i] + " ");
+
+                // Für die schöne Darstellung haben wir hier eine neue Zeile nach den ersten fünf Werten
+                if (i % 5 == 4) // Modulo Lösung dank unseres Lehrers!
+                {
+                    Console.WriteLine();
+                }
+            }
 
         }
 
