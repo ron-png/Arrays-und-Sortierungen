@@ -70,14 +70,26 @@ namespace Arrays_und_Sortierungen
             }
         }
 
-        // Methode, um ein Array zu erstelllen
-        static int[] ArrayErstellen(int arraydimension0)
+        // Methode, um ein Array zu erstelllen, evtl für Dimensionen unterschiedliche Methoden, bin aber noch nicht sicher :D
+        static int[] ArrayErstellenEindimensional()
         {
-            int[] array1 = new int[arraydimension0]; // Definiert, wie lang das Array werden soll
+
+
+            // Definiere Variabeln
+            int AnzahlArrayWerte;   // Variabel, die für die Eingabe des Nutzers zur Länge des Arrays speichert
+
+            // Fragt jetzt den Nutzer nach seiner gewünschten Arraylänge
+            AnzahlArrayWerte = ZahlHolen("Wie Viele Werte sollen in dem Array sein?");
+
+
+            // erstellt Array zur Ausgabe
+            int[] array1 = new int[AnzahlArrayWerte]; // Definiert, wie lang das Array werden soll
+
 
             // zum Zufallszahlen generieren...
             Random rnd = new Random();
 
+            // schreibt Werte ins array
             for (int i = 0; i < array1.GetLength(0); i++) // for loop, um das Array mit zufälligen Zahlen zu erstellen https://www.w3schools.com/cs/cs_for_loop.php
             {
                 array1[i] = rnd.Next();
@@ -147,25 +159,15 @@ namespace Arrays_und_Sortierungen
         // Methode das Array.
         static void Variante3()
         {
-            // Definiere Variabeln
-            int AnzahlArrayWerte;   // Variabel, die für die Eingabe des Nutzers zur Länge des Arrays speichert
 
             // zum Zufallszahlen generieren...
             Random rnd = new Random();
 
-            // Fragt jetzt den Nutzer nach seiner gewünschten Arraylänge
-            AnzahlArrayWerte = ZahlHolen("Wie Viele Werte sollen in dem Array sein?");
-
+            // erstellt Array
             int[] arrayVariante3;
 
-            arrayVariante3 = ArrayErstellen(AnzahlArrayWerte);
-
-            //int[] array1 = new int[AnzahlArrayWerte]; // Definiert, wie lang das Array werden soll
-
-            //for (int i = 0; i < array1.GetLength(0); i++) // for loop, um das Array mit zufälligen Zahlen zu erstellen https://www.w3schools.com/cs/cs_for_loop.php
-            //{
-            //    array1[i] = rnd.Next();
-            //}                               
+            // Schreibt ins Array
+            arrayVariante3 = ArrayErstellenEindimensional();
 
             // ruft die Methode auf, um den Array Auszugeben
             ArrayAusgabe(arrayVariante3);
