@@ -259,3 +259,15 @@ namespace Arrays_und_Sortierungen
 
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+// Na Herr W.....?
