@@ -13,8 +13,8 @@ namespace Arrays_und_Sortierungen
 
             //Variante1();
             //Variante2();
-            Variante3();
-            //Variante4();
+            //Variante3();
+            Variante4();
             //Variante5();
             //Variante6();
             //Variante7();
@@ -53,50 +53,7 @@ namespace Arrays_und_Sortierungen
             return NutzerZahl;
         } // Code kommt aus altem Codeknacker Projekt. Siehe https://github.com/ron-png/Codeknacker
 
-        // Methode, um die Arrays auszugeben
-        static void ArrayAusgabe(int[] arrayAngabe)
-        {
 
-            for (int i = 0; i < arrayAngabe.GetLength(0); i++) // for loop, um das Array mit zufälligen Zahlen zu erstellen https://www.w3schools.com/cs/cs_for_loop.php
-            {
-                Console.Write(arrayAngabe[i] + " ");
-
-
-                // Für die schöne Darstellung haben wir hier eine neue Zeile nach den ersten fünf Werten
-                if (i % 5 == 4) // Modulo Lösung dank unseres Lehrers!
-                {
-                    Console.WriteLine();
-                }
-            }
-        }
-
-        // Methode, um ein Array zu erstelllen, evtl für Dimensionen unterschiedliche Methoden, bin aber noch nicht sicher :D
-        static int[] ArrayErstellenEindimensional()
-        {
-
-
-            // Definiere Variabeln
-            int AnzahlArrayWerte;   // Variabel, die für die Eingabe des Nutzers zur Länge des Arrays speichert
-
-            // Fragt jetzt den Nutzer nach seiner gewünschten Arraylänge
-            AnzahlArrayWerte = ZahlHolen("Wie Viele Werte sollen in dem Array sein?");
-
-
-            // erstellt Array zur Ausgabe
-            int[] array1 = new int[AnzahlArrayWerte]; // Definiert, wie lang das Array werden soll
-
-
-            // zum Zufallszahlen generieren...
-            Random rnd = new Random();
-
-            // schreibt Werte ins array
-            for (int i = 0; i < array1.GetLength(0); i++) // for loop, um das Array mit zufälligen Zahlen zu erstellen https://www.w3schools.com/cs/cs_for_loop.php
-            {
-                array1[i] = rnd.Next();
-            }
-
-            return array1;
-        }
 
         // Variante 1:
         // Erstellen Sie ein Programm, welches ein Array mit 10 Feldern anlegt und dieses mit Zahlen füllt.
@@ -167,13 +124,58 @@ namespace Arrays_und_Sortierungen
             int[] arrayVariante3;
 
             // Schreibt ins Array
-            arrayVariante3 = ArrayErstellenEindimensional();
+            arrayVariante3 = ArrayErstellen();
 
             // ruft die Methode auf, um den Array Auszugeben
             ArrayAusgabe(arrayVariante3);
         }
 
+        // Methode, um eindimensionale Arrays auszugeben
+        static void ArrayAusgabe(int[] arrayAngabe)
+        {
 
+            // Array wird ausgegeben, eindimensionele arrays only multidimensionale Arrays später 
+
+            for (int i = 0; i < arrayAngabe.GetLength(0); i++) // for loop, um das Array mit zufälligen Zahlen zu erstellen https://www.w3schools.com/cs/cs_for_loop.php
+            {
+                Console.Write(arrayAngabe[i] + " ");
+
+
+                // Für die schöne Darstellung haben wir hier eine neue Zeile nach den ersten fünf Werten
+                if (i % 5 == 4) // Modulo Lösung dank unseres Lehrers!
+                {
+                    Console.WriteLine();
+                }
+            }
+        }
+
+        // Methode, um eindimensionale Arrays zu erstelllen.
+        static int[] ArrayErstellen()
+        {
+
+
+            // Definiere Variabeln
+            int AnzahlArrayWerte;   // Variabel, die für die Eingabe des Nutzers zur Länge des Arrays speichert
+
+            // Fragt jetzt den Nutzer nach seiner gewünschten Arraylänge
+            AnzahlArrayWerte = ZahlHolen("Wie Viele Werte sollen in dem Array sein?");
+
+
+            // erstellt Array zur Ausgabe
+            int[] array1 = new int[AnzahlArrayWerte]; // Definiert, wie lang das Array werden soll
+
+
+            // zum Zufallszahlen generieren...
+            Random rnd = new Random();
+
+            // schreibt Werte ins array
+            for (int i = 0; i < array1.GetLength(0); i++) // for loop, um das Array mit zufälligen Zahlen zu erstellen https://www.w3schools.com/cs/cs_for_loop.php
+            {
+                array1[i] = rnd.Next();
+            }
+
+            return array1;
+        }
 
 
         // Variante 4:
@@ -182,7 +184,7 @@ namespace Arrays_und_Sortierungen
         // Methode.
         static void Variante4()
         {
-
+            ArrayErstellen();
         }
 
 
