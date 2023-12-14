@@ -117,9 +117,6 @@ namespace Arrays_und_Sortierungen
         static void Variante3()
         {
 
-            // zum Zufallszahlen generieren...
-            Random rnd = new Random();
-
             // erstellt Array
             int[] arrayVariante3;
 
@@ -157,24 +154,30 @@ namespace Arrays_und_Sortierungen
             // Definiere Variabeln
             int AnzahlArrayWerte;   // Variabel, die für die Eingabe des Nutzers zur Länge des Arrays speichert
 
+
+            
+            
+            
             // Fragt jetzt den Nutzer nach seiner gewünschten Arraylänge
             AnzahlArrayWerte = ZahlHolen("Wie Viele Werte sollen in dem Array sein?");
-
-
-            // erstellt Array zur Ausgabe
             int[] array1 = new int[AnzahlArrayWerte]; // Definiert, wie lang das Array werden soll
-
 
             // zum Zufallszahlen generieren...
             Random rnd = new Random();
 
-            // schreibt Werte ins array
-            for (int i = 0; i < array1.GetLength(0); i++) // for loop, um das Array mit zufälligen Zahlen zu erstellen https://www.w3schools.com/cs/cs_for_loop.php
+                // schreibt Werte ins array
+            for (int i = 0; i < array1.Length; i++) // for loop, um das Array mit zufälligen Zahlen zu erstellen https://www.w3schools.com/cs/cs_for_loop.php
             {
                 array1[i] = rnd.Next();
             }
 
             return array1;
+            
+
+
+            
+
+            // return array1;
         }
 
 
@@ -184,8 +187,54 @@ namespace Arrays_und_Sortierungen
         // Methode.
         static void Variante4()
         {
-            ArrayErstellen();
+            int[,] arrayVariante4;
+
+            arrayVariante4 = ArrayErstellenMultidimensional();
+
+            ArrayAusgabeMultidimensional(arrayVariante4);
+
         }
+
+
+
+        // Multidimensionales Aarray Erstellen
+        static int[,] ArrayErstellenMultidimensional()
+        {
+
+
+            // Definiere Variabeln
+            int AnzahlDimensionen;   // Variabel, die für die Eingabe des Nutzers zur Länge des Arrays speichert
+
+
+
+            // erstellt Array zur Ausgabe
+            AnzahlDimensionen = ZahlHolen("Wie Viele Dimensionen soll dein Array haben?");
+
+            // Erstellt Array, um die verschiedenen Dimensionen zu definieren
+            int[] Dimensionen = new int[AnzahlDimensionen];
+
+            for (int i = 0; i < Dimensionen.GetLength(0); i++)
+                {
+                Dimensionen[i] = ZahlHolen("Wie Viele Werte sollen in Dimension " + i + 1 + " sein?");
+                }
+
+
+
+
+            int[,] array1 = new int[2, 2];
+
+            return array1;
+        }
+
+
+        // Multideimensionales Array Ausgeben
+        static void ArrayAusgabeMultidimensional(int[,] arrayAngabe)
+        {
+
+        }
+
+
+
 
 
         // Variante 5:
@@ -270,4 +319,4 @@ namespace Arrays_und_Sortierungen
 
 
 
-// Na Herr W.....?
+// Na Herr W.....
